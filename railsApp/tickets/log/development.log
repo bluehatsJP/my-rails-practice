@@ -1,0 +1,1996 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Thu Sep 15 07:23:59 +0900 2011
+Served asset /rails.png - 200 OK (58ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sat Sep 17 07:57:47 +0900 2011
+  Processing by TicketsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'tickets'):
+  app/controllers/tickets_controller.rb:5:in `index'
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (110.0ms)
+
+
+Started GET "/ticket" for 127.0.0.1 at Sat Sep 17 07:58:15 +0900 2011
+
+ActionController::RoutingError (No route matches [GET] "/ticket"):
+  
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sat Sep 17 07:58:20 +0900 2011
+  Processing by TicketsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'tickets'):
+  app/controllers/tickets_controller.rb:5:in `index'
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (5.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTickets (20110916225643)
+  [1m[35m (1.0ms)[0m  CREATE TABLE "tickets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "seat_id_seq" varchar(255), "address" text, "price_paid" decimal, "email_address" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110916225643')[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tickets")
+
+
+Started GET "/tickets" for 127.0.0.1 at Sat Sep 17 08:15:39 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" [0m
+Rendered tickets/index.html.erb within layouts/application (20.0ms)
+Compiled application.css  (3ms)  (pid 5772)
+Compiled scaffolds.css  (41ms)  (pid 5772)
+Compiled tickets.css  (4ms)  (pid 5772)
+Compiled application.js  (22ms)  (pid 5772)
+Compiled jquery.js  (55ms)  (pid 5772)
+Compiled jquery_ujs.js  (36ms)  (pid 5772)
+Compiled tickets.js  (383ms)  (pid 5772)
+Completed 200 OK in 854ms (Views: 851.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:15:48 +0900 2011
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:15:48 +0900 2011
+Served asset /scaffolds.css - 200 OK (15ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:15:48 +0900 2011
+Served asset /tickets.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sat Sep 17 08:15:48 +0900 2011
+Served asset /jquery.js - 200 OK (23ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sat Sep 17 08:15:48 +0900 2011
+Served asset /jquery_ujs.js - 200 OK (18ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:15:48 +0900 2011
+Served asset /tickets.js - 200 OK (17ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:15:48 +0900 2011
+Served asset /application.js - 200 OK (14ms)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at Sat Sep 17 08:17:34 +0900 2011
+  Processing by TicketsController#new as HTML
+Rendered tickets/_form.html.erb (25.0ms)
+Rendered tickets/new.html.erb within layouts/application (112.0ms)
+Completed 200 OK in 133ms (Views: 132.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at Sat Sep 17 08:18:16 +0900 2011
+  Processing by TicketsController#create as HTML
+  Parameters: {"commit"=>"Create Ticket", "ticket"=>{"address"=>"神奈川県川崎市", "name"=>"テストチケット", "seat_id_seq"=>"A01", "price_paid"=>"1000", "email_address"=>"XXXX@docomo.ne.jp"}, "authenticity_token"=>"YqrhM5opeYjTBHdnJ71QsNuDPeCfjwKp4LTzjdik+6o=", "utf8"=>"✓"}
+  [1m[35mSQL (136.0ms)[0m  INSERT INTO "tickets" ("address", "created_at", "email_address", "name", "price_paid", "seat_id_seq", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["address", "神奈川県川崎市"], ["created_at", Fri, 16 Sep 2011 23:18:16 UTC +00:00], ["email_address", "XXXX@docomo.ne.jp"], ["name", "テストチケット"], ["price_paid", #<BigDecimal:dcf2450,'0.1E4',4(8)>], ["seat_id_seq", "A01"], ["updated_at", Fri, 16 Sep 2011 23:18:16 UTC +00:00]]
+Redirected to http://localhost:3000/tickets/1
+Completed 302 Found in 207ms
+
+
+Started GET "/tickets/1" for 127.0.0.1 at Sat Sep 17 08:18:16 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered tickets/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 43ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:16 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:16 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:16 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:17 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:17 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sat Sep 17 08:18:31 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:31 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:31 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:31 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:31 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:31 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at Sat Sep 17 08:18:36 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered tickets/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:36 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:36 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:36 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:36 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:36 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/tickets/1/edit" for 127.0.0.1 at Sat Sep 17 08:18:38 +0900 2011
+  Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered tickets/_form.html.erb (15.0ms)
+Rendered tickets/edit.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:38 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:38 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:38 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:38 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:38 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started PUT "/tickets/1" for 127.0.0.1 at Sat Sep 17 08:18:45 +0900 2011
+  Processing by TicketsController#update as HTML
+  Parameters: {"commit"=>"Update Ticket", "ticket"=>{"address"=>"神奈川県川崎市宮前区", "name"=>"テストチケット", "seat_id_seq"=>"A01", "price_paid"=>"1000", "email_address"=>"XXXX@docomo.ne.jp"}, "authenticity_token"=>"YqrhM5opeYjTBHdnJ71QsNuDPeCfjwKp4LTzjdik+6o=", "utf8"=>"✓", "id"=>"1"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (1.0ms)[0m  UPDATE "tickets" SET "updated_at" = '2011-09-16 23:18:45.644680', "address" = '神奈川県川崎市宮前区' WHERE "tickets"."id" = 1
+Redirected to http://localhost:3000/tickets/1
+Completed 302 Found in 28ms
+
+
+Started GET "/tickets/1" for 127.0.0.1 at Sat Sep 17 08:18:45 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered tickets/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:45 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:45 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:45 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:45 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:45 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/tickets/1/edit" for 127.0.0.1 at Sat Sep 17 08:18:51 +0900 2011
+  Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered tickets/_form.html.erb (14.0ms)
+Rendered tickets/edit.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:51 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:51 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:51 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:51 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:51 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/tickets/1" for 127.0.0.1 at Sat Sep 17 08:18:55 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTicket Load (1.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered tickets/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:55 +0900 2011
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:55 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:55 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:55 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:55 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sat Sep 17 08:18:59 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:59 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:59 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:18:59 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:59 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:18:59 +0900 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started DELETE "/tickets/1" for 127.0.0.1 at Sat Sep 17 08:19:08 +0900 2011
+  Processing by TicketsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YqrhM5opeYjTBHdnJ71QsNuDPeCfjwKp4LTzjdik+6o=", "id"=>"1"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "tickets" WHERE "tickets"."id" = ?  [["id", 1]]
+Redirected to http://localhost:3000/tickets
+Completed 302 Found in 18ms
+
+
+Started GET "/tickets" for 127.0.0.1 at Sat Sep 17 08:19:09 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" [0m
+Rendered tickets/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:09 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:09 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:19:09 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:19:09 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:09 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at Sat Sep 17 08:19:11 +0900 2011
+  Processing by TicketsController#new as HTML
+Rendered tickets/_form.html.erb (15.0ms)
+Rendered tickets/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:11 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:19:11 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:11 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:19:11 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:11 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at Sat Sep 17 08:19:55 +0900 2011
+  Processing by TicketsController#create as HTML
+  Parameters: {"commit"=>"Create Ticket", "ticket"=>{"address"=>"神奈川県川崎市宮前区", "name"=>"テストチケット再発行", "seat_id_seq"=>"A01", "price_paid"=>"1200", "email_address"=>"XXXX@docomo.ne.jp"}, "authenticity_token"=>"YqrhM5opeYjTBHdnJ71QsNuDPeCfjwKp4LTzjdik+6o=", "utf8"=>"✓"}
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "tickets" ("address", "created_at", "email_address", "name", "price_paid", "seat_id_seq", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["address", "神奈川県川崎市宮前区"], ["created_at", Fri, 16 Sep 2011 23:19:55 UTC +00:00], ["email_address", "XXXX@docomo.ne.jp"], ["name", "テストチケット再発行"], ["price_paid", #<BigDecimal:dd60d48,'0.12E4',4(8)>], ["seat_id_seq", "A01"], ["updated_at", Fri, 16 Sep 2011 23:19:55 UTC +00:00]]
+Redirected to http://localhost:3000/tickets/2
+Completed 302 Found in 71ms
+
+
+Started GET "/tickets/2" for 127.0.0.1 at Sat Sep 17 08:19:55 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered tickets/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:56 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:56 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:56 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:19:56 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:19:56 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sat Sep 17 08:19:58 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:58 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:58 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sat Sep 17 08:19:58 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sat Sep 17 08:19:58 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sat Sep 17 08:19:59 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:05:46 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" [0m
+Rendered tickets/index.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 450ms (Views: 446.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:05:55 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:05:56 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:05:56 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:05:56 +0900 2011
+Served asset /tickets.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:05:56 +0900 2011
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:05:56 +0900 2011
+Served asset /tickets.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:05:56 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:09:04 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 36ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:04 +0900 2011
+Served asset /tickets.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:04 +0900 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:04 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:04 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:04 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:04 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:04 +0900 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at Sun Sep 18 08:09:09 +0900 2011
+  Processing by TicketsController#new as HTML
+Rendered tickets/_form.html.erb (18.0ms)
+Rendered tickets/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 117ms (Views: 115.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:09 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:09 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:09 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:09 +0900 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:09 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:09 +0900 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:09 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+  Processing by TicketsController#create as HTML
+  Parameters: {"commit"=>"Create Ticket", "ticket"=>{"address"=>"東京都八王子市", "name"=>"テストチケット２", "seat_id_seq"=>"A02", "price_paid"=>"1300", "email_address"=>"YYYY@docomo.ne.jp"}, "authenticity_token"=>"VCGokNmu2UNj2vxRrbIlt3ypdfi9xnNMsnm14Ht6fd0=", "utf8"=>"✓"}
+  [1m[36mSQL (230.0ms)[0m  [1mINSERT INTO "tickets" ("address", "created_at", "email_address", "name", "price_paid", "seat_id_seq", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["address", "東京都八王子市"], ["created_at", Sat, 17 Sep 2011 23:09:59 UTC +00:00], ["email_address", "YYYY@docomo.ne.jp"], ["name", "テストチケット２"], ["price_paid", #<BigDecimal:7e21e88,'0.13E4',4(8)>], ["seat_id_seq", "A02"], ["updated_at", Sat, 17 Sep 2011 23:09:59 UTC +00:00]]
+Redirected to http://localhost:3000/tickets/3
+Completed 302 Found in 276ms
+
+
+Started GET "/tickets/3" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTicket Load (1.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", "3"]]
+Rendered tickets/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:09:59 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets/3/edit" for 127.0.0.1 at Sun Sep 18 08:10:05 +0900 2011
+  Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Rendered tickets/_form.html.erb (14.0ms)
+Rendered tickets/edit.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:05 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:05 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:05 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:05 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:05 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:05 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:05 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/tickets/3" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+  Processing by TicketsController#update as HTML
+  Parameters: {"commit"=>"Update Ticket", "ticket"=>{"address"=>"東京都八王子市", "name"=>"テストチケット２", "seat_id_seq"=>"A02", "price_paid"=>"1300", "email_address"=>"YYYY@docomo.ne.jp"}, "authenticity_token"=>"VCGokNmu2UNj2vxRrbIlt3ypdfi9xnNMsnm14Ht6fd0=", "utf8"=>"✓", "id"=>"3"}
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", "3"]]
+Redirected to http://localhost:3000/tickets/3
+Completed 302 Found in 13ms
+
+
+Started GET "/tickets/3" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Rendered tickets/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 80ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:12 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:10:14 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:14 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:14 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:14 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:14 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:14 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:14 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:14 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets/2/edit" for 127.0.0.1 at Sun Sep 18 08:10:19 +0900 2011
+  Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered tickets/_form.html.erb (11.0ms)
+Rendered tickets/edit.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:19 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:19 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:19 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:19 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:19 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:19 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:19 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:10:21 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:21 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:21 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:10:21 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:21 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:21 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:21 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:10:21 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at Sun Sep 18 08:12:28 +0900 2011
+  Processing by TicketsController#new as HTML
+Rendered tickets/_form.html.erb (12.0ms)
+Rendered tickets/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:12:28 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:12:28 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:12:28 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:12:28 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:12:28 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:12:28 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:12:28 +0900 2011
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+  Processing by TicketsController#create as HTML
+  Parameters: {"commit"=>"Create Ticket", "ticket"=>{"address"=>"神奈川県横浜市", "name"=>"テストチケット３", "seat_id_seq"=>"B01", "price_paid"=>"1000", "email_address"=>"OOO@docomo.ne.jp"}, "authenticity_token"=>"VCGokNmu2UNj2vxRrbIlt3ypdfi9xnNMsnm14Ht6fd0=", "utf8"=>"✓"}
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "tickets" ("address", "created_at", "email_address", "name", "price_paid", "seat_id_seq", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["address", "神奈川県横浜市"], ["created_at", Sat, 17 Sep 2011 23:13:02 UTC +00:00], ["email_address", "OOO@docomo.ne.jp"], ["name", "テストチケット３"], ["price_paid", #<BigDecimal:7c361b8,'0.1E4',4(8)>], ["seat_id_seq", "B01"], ["updated_at", Sat, 17 Sep 2011 23:13:02 UTC +00:00]]
+Redirected to http://localhost:3000/tickets/4
+Completed 302 Found in 19ms
+
+
+Started GET "/tickets/4" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", "4"]]
+Rendered tickets/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:13:02 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:13:05 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" [0m
+Rendered tickets/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 93ms (Views: 89.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:13:05 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:13:05 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:13:05 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:13:05 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:13:05 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:13:05 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:13:05 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTickets (20110916225643)
+Migrating to AddPhoneToTickets (20110917233218)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "tickets" ADD "phone" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110917233218')
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("tickets")[0m
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:38:49 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:38:49 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:38:49 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:38:49 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:38:49 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:38:49 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:38:49 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:38:49 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at Sun Sep 18 08:38:53 +0900 2011
+  Processing by TicketsController#new as HTML
+Rendered tickets/_form.html.erb (18.0ms)
+Rendered tickets/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:38:53 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:38:53 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:38:53 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:38:53 +0900 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:38:53 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:38:53 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:38:53 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at Sun Sep 18 08:39:47 +0900 2011
+  Processing by TicketsController#create as HTML
+  Parameters: {"commit"=>"Create Ticket", "ticket"=>{"address"=>"鹿児島県鹿児島市", "name"=>"テストチケット４", "seat_id_seq"=>"B02", "price_paid"=>"1100", "phone"=>"777-777-777", "email_address"=>"TTT@docomo.ne.jp"}, "authenticity_token"=>"VCGokNmu2UNj2vxRrbIlt3ypdfi9xnNMsnm14Ht6fd0=", "utf8"=>"✓"}
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "tickets" ("address", "created_at", "email_address", "name", "phone", "price_paid", "seat_id_seq", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "鹿児島県鹿児島市"], ["created_at", Sat, 17 Sep 2011 23:39:47 UTC +00:00], ["email_address", "TTT@docomo.ne.jp"], ["name", "テストチケット４"], ["phone", "777-777-777"], ["price_paid", #<BigDecimal:7a66010,'0.11E4',4(8)>], ["seat_id_seq", "B02"], ["updated_at", Sat, 17 Sep 2011 23:39:47 UTC +00:00]]
+Redirected to http://localhost:3000/tickets/5
+Completed 302 Found in 21ms
+
+
+Started GET "/tickets/5" for 127.0.0.1 at Sun Sep 18 08:39:47 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", "5"]]
+Rendered tickets/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:47 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:47 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:47 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:47 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:47 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:48 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:48 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:39:51 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" [0m
+Rendered tickets/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:51 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:51 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:51 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:51 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:51 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:51 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:51 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets/2/edit" for 127.0.0.1 at Sun Sep 18 08:39:57 +0900 2011
+  Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1  [["id", "2"]]
+Rendered tickets/_form.html.erb (16.0ms)
+Rendered tickets/edit.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:57 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:57 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:57 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:39:57 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:57 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:57 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:39:57 +0900 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started PUT "/tickets/2" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+  Processing by TicketsController#update as HTML
+  Parameters: {"commit"=>"Update Ticket", "ticket"=>{"address"=>"神奈川県川崎市宮前区", "name"=>"テストチケット再発行", "seat_id_seq"=>"A01", "price_paid"=>"1200", "phone"=>"111-111-1111", "email_address"=>"XXXX@docomo.ne.jp"}, "authenticity_token"=>"VCGokNmu2UNj2vxRrbIlt3ypdfi9xnNMsnm14Ht6fd0=", "utf8"=>"✓", "id"=>"2"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (1.0ms)[0m  UPDATE "tickets" SET "phone" = '111-111-1111', "updated_at" = '2011-09-17 23:40:08.671424' WHERE "tickets"."id" = 2
+Redirected to http://localhost:3000/tickets/2
+Completed 302 Found in 62ms
+
+
+Started GET "/tickets/2" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Rendered tickets/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 36ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:08 +0900 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:40:11 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:11 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:11 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:11 +0900 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:11 +0900 2011
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:11 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:11 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:11 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets/4/edit" for 127.0.0.1 at Sun Sep 18 08:40:17 +0900 2011
+  Processing by TicketsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Rendered tickets/_form.html.erb (12.0ms)
+Rendered tickets/edit.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:18 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:18 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:18 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:18 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:18 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:18 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:18 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:40:25 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 96ms (Views: 91.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:25 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:25 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:25 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:25 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:40:25 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:25 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:40:25 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:43:30 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" [0m
+Rendered tickets/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:43:30 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:43:30 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:43:30 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:43:30 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:43:30 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:43:30 +0900 2011
+Served asset /tickets.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:43:30 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at Sun Sep 18 08:43:33 +0900 2011
+  Processing by TicketsController#new as HTML
+ERROR: compiling _app_views_tickets__form_html_erb__279391813_64925112 RAISED compile error
+C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:40: unknown regexp options - dv
+C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:40: unmatched ): /div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </
+C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:41: unterminated string meets end of file
+C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:41: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_tickets__form_html_erb__279391813_64925112(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "tickets/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  form_for(@ticket) do |f| @output_buffer.safe_concat('
+');   if @ticket.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@ticket.errors.count, "error") );@output_buffer.safe_concat(' prohibited this ticket from being saved:</h2>
+
+      <ul>
+');       @ticket.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label "Seat #" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :seat_id_seq );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :address );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_area :address );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :price_paid );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :price_paid );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :email_address );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :email_address );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :phone# );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :phone );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:41:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/partial_renderer.rb:256:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/partial_renderer.rb:228:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/partial_renderer.rb:227:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/partial_renderer.rb:219:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+C:/Users/uehara/railsApp/tickets/app/views/tickets/new.html.erb:3:in `_app_views_tickets_new_html_erb__363112587_64850808'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/template.rb:144:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/template.rb:144:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:40:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:268:in `retrieve_response_from_mimes'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:195:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+C:/Users/uehara/railsApp/tickets/app/controllers/tickets_controller.rb:29:in `new'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__569174235__process_action__943997142__callbacks'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `recognize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/handler/webrick.rb:13:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.3.2/lib/rack/server.rb:265:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/railties-3.1.0/lib/rails/commands/server.rb:70:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/railties-3.1.0/lib/rails/commands.rb:54
+C:/Ruby187/lib/ruby/gems/1.8/gems/railties-3.1.0/lib/rails/commands.rb:49:in `tap'
+C:/Ruby187/lib/ruby/gems/1.8/gems/railties-3.1.0/lib/rails/commands.rb:49
+script/rails:6:in `require'
+script/rails:6
+Rendered tickets/_form.html.erb (106.0ms)
+Rendered tickets/new.html.erb within layouts/application (111.0ms)
+Completed 500 Internal Server Error in 128ms
+
+ActionView::Template::Error (compile error
+C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:40: unknown regexp options - dv
+C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:40: unmatched ): /div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </
+C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:41: unterminated string meets end of file
+C:/Users/uehara/railsApp/tickets/app/views/tickets/_form.html.erb:41: syntax error, unexpected $end, expecting ')'):
+    37:   </div>
+    38:   <div class="actions">
+    39:     <%= f.submit %>
+    40:   </div>
+    41: <% end %>
+  app/views/tickets/_form.html.erb:41:in `compile'
+  app/views/tickets/new.html.erb:3:in `_app_views_tickets_new_html_erb__363112587_64850808'
+  app/controllers/tickets_controller.rb:29:in `new'
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at Sun Sep 18 08:44:03 +0900 2011
+  Processing by TicketsController#new as HTML
+Rendered tickets/_form.html.erb (17.0ms)
+Rendered tickets/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:44:03 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:44:03 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:44:03 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:44:03 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:44:03 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:44:03 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:44:03 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/tickets" for 127.0.0.1 at Sun Sep 18 08:44:07 +0900 2011
+  Processing by TicketsController#index as HTML
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" 
+Rendered tickets/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:44:07 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:44:07 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:44:07 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:44:07 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:44:07 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:44:07 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:44:07 +0900 2011
+Served asset /application.js - 304 Not Modified (2ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTickets (20110916225643)
+Migrating to AddPhoneToTickets (20110917233218)
+Migrating to CreateEvents (20110917235102)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist" varchar(255), "description" text, "price_low" decimal, "price_high" decimal, "event_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110917235102')
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("events")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tickets")
+
+
+Started GET "/events" for 127.0.0.1 at Sun Sep 18 08:51:51 +0900 2011
+  Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Rendered events/index.html.erb within layouts/application (2.0ms)
+Compiled application.css  (6ms)  (pid 2680)
+Compiled events.css  (6ms)  (pid 2680)
+Compiled application.js  (13ms)  (pid 2680)
+Compiled events.js  (495ms)  (pid 2680)
+Completed 200 OK in 616ms (Views: 613.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /events.css - 200 OK (29ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /application.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /events.js - 200 OK (16ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:52 +0900 2011
+Served asset /application.js - 200 OK (52ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+  Processing by EventsController#new as HTML
+Rendered events/_form.html.erb (22.0ms)
+Rendered events/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 49ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /events.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:51:58 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/events" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+  Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+Rendered events/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:52:03 +0900 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/events" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+  Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Rendered events/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:03 +0900 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at Sun Sep 18 08:55:05 +0900 2011
+  Processing by EventsController#new as HTML
+Rendered events/_form.html.erb (22.0ms)
+Rendered events/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:06 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/events" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+  Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" 
+Rendered events/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 08:55:11 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at Sun Sep 18 09:07:50 +0900 2011
+  Processing by EventsController#new as HTML
+Rendered events/_form.html.erb (15.0ms)
+Rendered events/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 09:07:50 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 09:07:50 +0900 2011
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 09:07:50 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 09:07:50 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 09:07:51 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 09:07:51 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 09:07:51 +0900 2011
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 09:07:51 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 09:07:51 +0900 2011
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/events" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+  Processing by EventsController#create as HTML
+  Parameters: {"commit"=>"Create Event", "authenticity_token"=>"VCGokNmu2UNj2vxRrbIlt3ypdfi9xnNMsnm14Ht6fd0=", "utf8"=>"✓", "event"=>{"artist"=>"上原　莉乃", "price_high"=>"2000", "event_date(1i)"=>"2011", "description"=>"あまえんぼ歌手", "event_date(2i)"=>"9", "event_date(3i)"=>"18", "price_low"=>"1200"}}
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "events" ("artist", "created_at", "description", "event_date", "price_high", "price_low", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["artist", "上原　莉乃"], ["created_at", Sun, 18 Sep 2011 00:11:44 UTC +00:00], ["description", "あまえんぼ歌手"], ["event_date", Sun, 18 Sep 2011], ["price_high", #<BigDecimal:7b17160,'0.2E4',4(8)>], ["price_low", #<BigDecimal:7b16b90,'0.12E4',4(8)>], ["updated_at", Sun, 18 Sep 2011 00:11:44 UTC +00:00]]
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 20ms
+
+
+Started GET "/events/1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.0ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered events/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /events.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /events.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:44 +0900 2011
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/events" for 127.0.0.1 at Sun Sep 18 09:11:47 +0900 2011
+  Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Rendered events/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /events.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.css?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /tickets.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /events.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Sun Sep 18 09:11:48 +0900 2011
+Served asset /application.js - 304 Not Modified (0ms)
